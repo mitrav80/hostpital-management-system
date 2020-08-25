@@ -8,7 +8,8 @@ struct ad
     int cabin,phone,age;
 } x[100];
 int n,i,j=0,a=0,sum=0,g,flag,num;
-void read();
+void readFile();
+void writeToFile();
 void add();
 void view();
 void search();
@@ -17,7 +18,7 @@ void del();
 void show();
 int main()
 {
-    read();
+    readFile();
     int c,i,q;
     printf("Hospital Management System\n");
     int m,n;
@@ -80,7 +81,7 @@ int main()
         }
         else if(c==6)
         {
-            write();
+            writeToFile();
             return 0;
         }
         else
@@ -413,7 +414,7 @@ void del()
         printf("\n\nInvalid patient number\n");
 
 }
-void read()
+void readFile()
 {
     FILE *fp = fopen("patient.dat","r");
     if(fp == NULL)
@@ -423,13 +424,12 @@ void read()
         fp = fopen("patient.dat","w");
         fclose(fp);
         printf("File does not exist, Creating new file, exiting...\n\n\n");
-        return 0;
     }
 
     num = fread(x, sizeof(struct ad),100, fp);
     fclose(fp);
 }
-void write()
+void writeToFile()
 {
     FILE *fp = fopen("patient.dat","w");
     if(fp == NULL)
