@@ -56,27 +56,27 @@ int main()
         fflush(stdin);//making it clear
         if(c==1)//add
         {
-            system("cls");
+            system("clear");
             add();
         }
         else if(c==2)//view
         {
-            system("cls");
+            system("clear");
             view();
         }
         else if(c==3)//search
         {
-            system("cls");
+            system("clear");
             search();
         }
         else if(c==4)//edit
         {
-            system("cls");
+            system("clear");
             edit();
         }
         else if(c==5)//delete
         {
-            system("cls");
+            system("clear");
             del();
         }
         else if(c==6)
@@ -86,7 +86,7 @@ int main()
         }
         else
         {
-            system("cls");
+            system("clear");
             printf("\n\nInvalid input , try again by using valid inputs");
         }
         printf("\n\n");
@@ -96,7 +96,7 @@ void add()
 {
     printf("\n\n");
     printf("Data inputed on the database : %d\n\n",num);//how many inputs
-    printf("How many entry do you want to add : \n");
+    printf("How many entry do you want to add? : \n");
     scanf("%d",&n);
     sum=n+num;
 
@@ -105,10 +105,10 @@ void add()
         printf("\n");
         fflush(stdin);
         printf("Enter patient's Name : ");
-        gets(x[i].name);
+        fgets(x[i].name, sizeof(x[i].name), stdin);
         fflush(stdin);
         printf("Enter disease : ");
-        gets(x[i].disease);
+        fgets(x[i].disease, sizeof(x[i].name), stdin);
         fflush(stdin);
         printf("Enter the age : ");
         scanf("%d",&x[i].age);
@@ -159,14 +159,14 @@ void edit()
             {
                 fflush(stdin);
                 printf("Enter the new name : ");
-                gets(x[p].name);
+                fgets(x[p].name, sizeof(x[p].name), stdin);
 
             }
             else if(q==2)
             {
                 fflush(stdin);
                 printf("Enter the new Disease : ");
-                gets(x[p].disease);
+                fgets(x[p].disease, sizeof(x[p].disease), stdin);
             }
             else if(q==3)
             {
@@ -229,7 +229,7 @@ void search()
         int f=1;
         fflush(stdin);
         printf("Enter your name : ");
-        gets(u);
+        fgets(u, sizeof(u), stdin);
         fflush(stdin);
         for(g=0; g<num; g++)
         {
@@ -258,7 +258,7 @@ void search()
         int f=1;
         fflush(stdin);
         printf("Enter Disease : ");
-        gets(u);
+        fgets(u, sizeof(u), stdin);
         fflush(stdin);
         for(g=0; g<num; g++)
         {
@@ -368,7 +368,7 @@ void del()
     int f,h;
     printf("Enter the paitent number of the patient that you want to delete:");
     scanf("%d",&f);
-    if(f<num)
+    if(f>0)
     {
         printf("Menu\n");
         printf("------------------------\n");
