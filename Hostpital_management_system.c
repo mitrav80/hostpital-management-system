@@ -106,15 +106,14 @@ void add()
         fflush(stdin);
         printf("Enter patient's Name : ");
         fgets(x[i].name, sizeof(x[i].name), stdin);
-        fflush(stdin);
-        printf("Enter disease : ");
-        fgets(x[i].disease, sizeof(x[i].name), stdin);
-        fflush(stdin);
         printf("Enter the age : ");
         scanf("%d",&x[i].age);
         fflush(stdin);
         printf("Enter cabin no : ");
         scanf("%d",&x[i].cabin);
+        fflush(stdin);
+        printf("Enter disease : ");
+        fgets(x[i].disease, sizeof(x[i].name), stdin);
         fflush(stdin);
         printf("Enter phone number : ");
         scanf("%d",&x[i].phone);
@@ -204,7 +203,7 @@ void search()
     int s,h,f;
     char u[100];
     printf("By what do you want to search ?\n");
-    printf("1.Serial no.\n2.Name\n3.Disease\n4.Cabin no.\n5.Phone no.\n6.Age\n\nOption = ");
+    printf("1.Serial no.\n2.Name\n3.Disease\n4.Cabin no.\n5.Phone no.\n6.Age\n\nOption : ");
     scanf("%d",&h);
     if(h==1)
     {
@@ -372,7 +371,7 @@ void del()
     {
         printf("Menu\n");
         printf("------------------------\n");
-        printf("1.Remove the whole record\n2.Remove Name\n3.Remove Disease\n4.Remove age\n5.Remove Cabin\n6.Remove phone number\nPlease select your option :2 ");
+        printf("1.Remove the whole record\n2.Remove Name\n3.Remove Disease\n4.Remove age\n5.Remove Cabin\n6.Remove phone number\nPlease select your option : ");
         scanf("%d",&h);
         if(h==1)
         {
@@ -416,12 +415,12 @@ void del()
 }
 void readFile()
 {
-    FILE *fp = fopen("patient.dat","r");
+    FILE *fp = fopen("paitent.dat","r");
     if(fp == NULL)
     {
         //create empty file, so that we can open it
         //in the next execution of this program
-        fp = fopen("patient.dat","w");
+        fp = fopen("paitent.dat","wr");
         fclose(fp);
         printf("File does not exist, Creating new file, exiting...\n\n\n");
     }
