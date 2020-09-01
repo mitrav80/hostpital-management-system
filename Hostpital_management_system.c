@@ -362,6 +362,7 @@ void search()
 
 
 }
+
 void del()
 {
     int f,h;
@@ -418,7 +419,7 @@ void readFile()
     FILE *fp = fopen("paitent.dat","r");
     if(fp == NULL)
     {
-        //create empty file, so that we can open it
+        //create a empty file, so that we can open it
         //in the next execution of this program
         fp = fopen("paitent.dat","wr");
         fclose(fp);
