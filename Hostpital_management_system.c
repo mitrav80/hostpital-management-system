@@ -198,6 +198,7 @@ void edit()
         printf("\n\nInvalid option\nTry Again!!\n\n");
     }
 }
+
 void search()
 {
     int s,h,f;
@@ -414,6 +415,7 @@ void del()
         printf("\n\nInvalid patient number\n");
 
 }
+
 void readFile()
 {
     FILE *fp = fopen("paitent.dat","r");
