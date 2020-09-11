@@ -24,7 +24,7 @@ int main()
     int m,n;
 //making out the pattern
     
-    for(m=1; m<=4; m++)
+    for  (m=1; m<=4; m++)
     {
         for(n=1; n<=5; n++)
             printf(" ");
@@ -127,7 +127,7 @@ void add()
 
 void view()
 {
-    for(i=0; i<num; i++)
+    for (i=0; i<num; i++)
     {
         printf("\n");
         printf("Serial Number=%d\n",i);
