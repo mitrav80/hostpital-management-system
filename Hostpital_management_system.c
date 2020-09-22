@@ -139,6 +139,7 @@ void view()
         printf("\n\n");
     }
 }
+
 void edit()
 {
     int q,p;
@@ -277,6 +278,7 @@ void search()
 
 
         }
+
         if(f==1)
             printf("\nNot Found\n");
 
@@ -303,6 +305,7 @@ void search()
             }
 
         }
+
         if(f==1)
             printf("Not Found\n\n");
 
