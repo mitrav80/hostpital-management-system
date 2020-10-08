@@ -92,7 +92,7 @@ int main()
         printf("\n\n");
     }
 }
-void add()
+void add()   //adding data in database
 {
     printf("\n\n");
     printf("Data inputed on the database : %d\n\n",num);//how many inputs
@@ -434,8 +434,8 @@ void readFile()
     num = fread(x, sizeof(struct ad),100, fp);
     fclose(fp);
 }
-void writeToFile()
-{
+
+void writeToFile() 
     FILE *fp = fopen("patient.dat","w");
     if(fp == NULL)
     {
