@@ -17,6 +17,7 @@ void edit();
 void del();
 void show();
 int main()
+
 {
     readFile();
     int c,i,q;
