@@ -23,6 +23,7 @@ int main()
     int c,i,q;
     printf("Hospital Management System\n");
     int m,n;
+
 //making out the pattern
     
     for  (m=1; m<=4; m++)
@@ -93,6 +94,7 @@ int main()
         printf("\n\n");
     }
 }
+
 void add()   //adding data in database
 {
     printf("\n\n");
@@ -125,8 +127,8 @@ void add()   //adding data in database
         num++;
     }
 }
-
-void view()
+// view detail
+void view() 
 {
     for (i=0; i<num; i++)
     {
@@ -140,7 +142,7 @@ void view()
         printf("\n\n");
     }
 }
-
+// edit of data
 void edit()
 {
     int q,p;
