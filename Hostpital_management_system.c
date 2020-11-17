@@ -24,7 +24,7 @@ int main()
     printf("Hospital Management System\n");
     int m,n;
 
-//making out the pattern
+//making out the patterns
     
     for  (m=1; m<=4; m++)
     {
