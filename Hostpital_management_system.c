@@ -369,7 +369,7 @@ void search()
 
 
 }
-
+// delete function
 void del()
 {
     int f,h;
@@ -419,7 +419,6 @@ void del()
     }
     else
         printf("\n\nInvalid patient number\n");
-
 }
 
 void readFile()
